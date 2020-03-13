@@ -27,6 +27,7 @@ sysinfo.txt
 
 # UWP directory
 /UWP/**
+/App/*
 
 # Builds
 *.apk
