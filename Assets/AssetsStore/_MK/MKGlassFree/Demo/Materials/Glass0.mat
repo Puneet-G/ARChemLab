@@ -85,9 +85,9 @@ Material:
     - _MKEditorShowLightBehavior: 0
     - _MKEditorShowMainBehavior: 1
     - _MKEditorShowReflectionBehavior: 1
-    - _MKEditorShowRenderBehavior: 0
+    - _MKEditorShowRenderBehavior: 1
     - _MKEditorShowRimBehavior: 1
-    - _MKEditorShowSpecularBehavior: 0
+    - _MKEditorShowSpecularBehavior: 1
     - _MKEditorShowTranslucentBehavior: 0
     - _MainTint: 0
     - _Metallic: 0
@@ -96,13 +96,13 @@ Material:
     - _Parallax: 0.02
     - _ReflectIntensity: 0.25
     - _RenderMode: 0
-    - _RimIntensity: 0.34
+    - _RimIntensity: 1
     - _RimSize: 3.21
     - _ShadowIntensity: 0.1
-    - _Shininess: 0.115
+    - _Shininess: 0.032
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpecularIntensity: 0.5
+    - _SpecularIntensity: 0.418
     - _SrcBlend: 1
     - _TranslucentIntensity: 0.5
     - _TranslucentShininess: 0.275

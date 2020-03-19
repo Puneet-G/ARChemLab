@@ -509,6 +509,7 @@ namespace Microsoft.MixedReality.Toolkit.UI
         /// <inheritdoc />
         public void OnPointerDown(MixedRealityPointerEventData eventData)
         {
+
             if (!allowFarManipulation && eventData.Pointer as IMixedRealityNearPointer == null)
             {
                 return;
