@@ -24,6 +24,16 @@ public class CsInteraction : MonoBehaviour
     Quaternion csOrigRot;
     Vector3 csOrigScale;
 
+    public GameObject CsFormula;
+    public GameObject KFormula;
+    public GameObject LiFormula;
+    public GameObject NaFormula;
+
+
+    public GameObject instructionsStep2;
+    public GameObject instructionsStep3;
+    public GameObject water;
+
     //Use for init
     void Start()
     {
@@ -62,9 +72,17 @@ public class CsInteraction : MonoBehaviour
         k.transform.localScale = kOrigScale;
         cs.transform.localScale = csOrigScale;
 
+        CsFormula.SetActive(false);
+        KFormula.SetActive(false);
+        LiFormula.SetActive(false);
+        NaFormula.SetActive(false);
+
+        instructionsStep2.SetActive(true);
+        instructionsStep3.SetActive(false);
         na.SetActive(false);
         li.SetActive(false);
         k.SetActive(false);
         cs.SetActive(true);
+        water.GetComponent<Renderer>().material.SetColor("_ReflectionColor", new Color(123f / 255f, 137f / 255f, 148f / 255f, 71f / 255f));
     }
 }
