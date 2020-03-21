@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class DisplayReactiveMetals : MonoBehaviour
 {
+    public GameObject instrStep1;
+    public GameObject instrStep2;
+    public GameObject instrStep3;
+
     public GameObject RMGeneralComponents;
     public GameObject reactiveMetalsObjects;
     public GameObject flameTestObjects;
     public GameObject na;
+    public GameObject water;
     Vector3 naOrigPos;
     public GameObject li;
     Vector3 liOrigPos;
@@ -15,6 +20,11 @@ public class DisplayReactiveMetals : MonoBehaviour
     Vector3 kOrigPos;
     public GameObject cs;
     Vector3 csOrigPos;
+
+    public GameObject CsFormula;
+    public GameObject KFormula;
+    public GameObject LiFormula;
+    public GameObject NaFormula;
 
     //Use for init
     void Start()
@@ -33,14 +43,22 @@ public class DisplayReactiveMetals : MonoBehaviour
         li.transform.localPosition = liOrigPos;
         k.transform.localPosition = kOrigPos;
         cs.transform.localPosition = csOrigPos;
+
+        CsFormula.SetActive(false);
+        KFormula.SetActive(false);
+        LiFormula.SetActive(false);
+        NaFormula.SetActive(false);
         na.SetActive(false);
         li.SetActive(false);
         k.SetActive(false);
         cs.SetActive(false);
+        instrStep1.SetActive(true);
+        instrStep2.SetActive(false);
+        instrStep3.SetActive(false);
         reactiveMetalsObjects.SetActive(true);
         RMGeneralComponents.SetActive(true);
         flameTestObjects.SetActive(false);
-
+        water.GetComponent<Renderer>().material.SetColor("_ReflectionColor", new Color(123f/255f, 137f/255f, 148f/255f, 71f/255f));
     }
 
 
