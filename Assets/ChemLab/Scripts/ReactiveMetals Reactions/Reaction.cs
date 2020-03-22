@@ -5,7 +5,6 @@ using UnityEngine;
 public class Reaction : MonoBehaviour
 {
     bool react = false;
-
     Transform entryPoint;
     //Vector3 radialDirection;
     Vector3 originalScale;
@@ -18,8 +17,9 @@ public class Reaction : MonoBehaviour
     Material water;
     float timeCollision = 0;
     Color originalColor;
-    List<Rigidbody> destroyedPieces;
     bool exploded = false;
+    Material subBowlWater;
+    Color subBowlWaterOriginalColor;
 
     public GameObject reactionEffect;
     public float shrinkTime;
@@ -46,7 +46,9 @@ public class Reaction : MonoBehaviour
             reactionClone = Instantiate(reactionEffect, transform.position, transform.rotation, transform);
             reactionClone.transform.Rotate(-90, 0, 0);
             water = collision.collider.gameObject.GetComponent<Renderer>().material;
-            originalColor = water.GetColor("_ReflectionColor");
+            originalColor = water.GetColor("_BaseColor");
+            subBowlWater = collision.transform.parent.GetChild(1).GetComponent<Renderer>().material;
+            subBowlWaterOriginalColor = subBowlWater.GetColor("_horizonColor");
             timeCollision = 0;
         }
     }
@@ -65,7 +67,6 @@ public class Reaction : MonoBehaviour
                     Debug.Log("In Explosion block");
                     exploded = true;
                     StartCoroutine(Explode());
-
                 }
                 this.transform.localScale = Vector3.Lerp(originalScale, new Vector3(0f, 0f, 0f), timeCollision / 1.10f);
             }
@@ -89,7 +90,8 @@ public class Reaction : MonoBehaviour
                 else
                 {
                     this.transform.localScale = Vector3.Lerp(originalScale, new Vector3(0f, 0f, 0f), timeCollision / shrinkTime); //(Time.deltaTime / shrinkTime) * originalScale;
-                    water.SetColor("_ReflectionColor", Color.Lerp(originalColor, finalColor, timeCollision / shrinkTime));
+                    water.SetColor("_BaseColor", Color.Lerp(originalColor, finalColor, timeCollision / shrinkTime));
+                    subBowlWater.SetColor("_horizonColor", Color.Lerp(originalColor, finalColor, timeCollision / shrinkTime));
                 }
             }
         }
