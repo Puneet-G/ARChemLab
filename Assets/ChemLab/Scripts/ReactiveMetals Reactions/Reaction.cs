@@ -7,7 +7,7 @@ public class Reaction : MonoBehaviour
     bool react = false;
 
     Transform entryPoint;
-    Vector3 radialDirection;
+    //Vector3 radialDirection;
     Vector3 originalScale;
     Transform center;
     float angle = 0;
@@ -42,8 +42,9 @@ public class Reaction : MonoBehaviour
             entryPoint = collision.transform;
             center = collision.collider.transform;
             originalScale = transform.localScale;
-            radialDirection = center.position - entryPoint.position;
+            //radialDirection = center.position - entryPoint.position;
             reactionClone = Instantiate(reactionEffect, transform.position, transform.rotation, transform);
+            reactionClone.transform.Rotate(-90, 0, 0);
             water = collision.collider.gameObject.GetComponent<Renderer>().material;
             originalColor = water.GetColor("_ReflectionColor");
             timeCollision = 0;
@@ -66,6 +67,7 @@ public class Reaction : MonoBehaviour
                     StartCoroutine(Explode());
 
                 }
+                this.transform.localScale = Vector3.Lerp(originalScale, new Vector3(0f, 0f, 0f), timeCollision / 1.10f);
             }
             else
             {
@@ -96,16 +98,17 @@ public class Reaction : MonoBehaviour
     IEnumerator Explode()
     {
         Debug.Log("Explode");
-        Collider[] collidersToDestroy = Physics.OverlapSphere(transform.position, 0.39f);
-        foreach (Collider nearbyObject in collidersToDestroy)
-        {
-            Destructible dest = nearbyObject.GetComponent<Destructible>();
-            if (dest != null)
-            {
-                dest.Destroy();
-                break;
-            }
-        }
+        entryPoint.parent.GetComponent<Destructible>().Destroy();
+        //Collider[] collidersToDestroy = Physics.OverlapSphere(transform.position, 0.39f);
+        //foreach (Collider nearbyObject in collidersToDestroy)
+        //{
+        //    Destructible dest = nearbyObject.GetComponent<Destructible>();
+        //    if (dest != null)
+        //    {
+        //        dest.Destroy();
+        //        break;
+        //    }
+        //}
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, 0.39f);
         foreach (Collider near in colliders)
@@ -121,7 +124,7 @@ public class Reaction : MonoBehaviour
                 }
             }
         }
-        yield return new WaitForSeconds(shrinkTime);
+        yield return new WaitForSeconds(shrinkTime - 1);
         Destroy(reactionClone);
         foreach (Collider piece in colliders)
         {
@@ -132,9 +135,9 @@ public class Reaction : MonoBehaviour
             }
         }
 
-        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.GetComponent<Rigidbody>().isKinematic = false;
         react = false;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
         equation.SetActive(true);
         questions.SetActive(true);
     }
