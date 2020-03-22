@@ -28,7 +28,6 @@ namespace HoloToolkit.MRDL.PeriodicTable
 
         public float PresentationDistance = 1f;
         public float TravelTime = 1f;
-        public AnimationCurve SmoothPosition = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public bool OrientToCamera = true;
         public bool OrientYAxisOnly = true;
         public Transform TargetTranfsorm;
@@ -39,6 +38,10 @@ namespace HoloToolkit.MRDL.PeriodicTable
         bool returning = false;
         bool inPosition = false;
 
+        public void Awake()
+        {
+            PresentationDistance = HolographicSettings.IsDisplayOpaque ? 0.5f : 1f;
+        }
         public void Present()
         {
             if (presenting)
@@ -73,7 +76,7 @@ namespace HoloToolkit.MRDL.PeriodicTable
                 cameraForward.Normalize();
             }
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward, Vector3.up);
-            Vector3 targetPosition = cameraPosition + (cameraForward * PresentationDistance) + new Vector3(0.0f, -0.1f, 0.0f);
+            Vector3 targetPosition = cameraPosition + (cameraForward * PresentationDistance);// TODO use a HUX tool or something to get the main camera
             inPosition = false;
 
             float normalizedProgress = 0f;
@@ -83,8 +86,7 @@ namespace HoloToolkit.MRDL.PeriodicTable
             {
                 // Move the object directly in front of player
                 normalizedProgress = (Time.time - startTime) / TravelTime;
-                TargetTranfsorm.position = Vector3.Lerp(initialPosition, targetPosition, SmoothPosition.Evaluate(normalizedProgress));
-
+                TargetTranfsorm.position = Vector3.Lerp(initialPosition, targetPosition, normalizedProgress);
                 if (OrientToCamera)
                 {
                     TargetTranfsorm.rotation = Quaternion.Lerp(TargetTranfsorm.rotation, targetRotation, Time.deltaTime * 10f);
@@ -106,7 +108,7 @@ namespace HoloToolkit.MRDL.PeriodicTable
             while (normalizedProgress < 1f)
             {
                 normalizedProgress = (Time.time - startTime) / TravelTime;
-                TargetTranfsorm.position = Vector3.Lerp(targetPosition, initialPosition, SmoothPosition.Evaluate(normalizedProgress));
+                TargetTranfsorm.position = Vector3.Lerp(targetPosition, initialPosition, normalizedProgress);
                 if (OrientToCamera)
                 {
                     TargetTranfsorm.rotation = Quaternion.Lerp(TargetTranfsorm.rotation, initialRotation, Time.deltaTime * 10f);

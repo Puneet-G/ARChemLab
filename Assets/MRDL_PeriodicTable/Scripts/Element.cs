@@ -2,9 +2,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 //
+using HoloToolkit.Unity;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +18,7 @@ namespace HoloToolkit.MRDL.PeriodicTable
         public TextMesh ElementName;
         public TextMesh ElementNameDetail;
 
-        public TextMeshProUGUI ElementDescription;
+        public Text ElementDescription;
         public Text DataAtomicNumber;
         public Text DataAtomicWeight;
         public Text DataMeltingPoint;
@@ -40,17 +40,6 @@ namespace HoloToolkit.MRDL.PeriodicTable
         private Material dimMaterial;
         private Material clearMaterial;
         private PresentToPlayer present;
-
-        public void SetActiveElement()
-        {
-            Element element = gameObject.GetComponent<Element>();
-            ActiveElement = element;
-        }
-
-        public void ResetActiveElement()
-        {
-            ActiveElement = null;
-        }
 
         public void Start()
         {
