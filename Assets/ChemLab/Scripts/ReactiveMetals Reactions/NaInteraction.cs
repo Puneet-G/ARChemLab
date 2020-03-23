@@ -32,6 +32,9 @@ public class NaInteraction : MonoBehaviour
     public GameObject instructionsStep2;
     public GameObject instructionsStep3;
     public GameObject water;
+    public GameObject water2;
+    public GameObject bowl;
+
 
 
     //Use for init
@@ -84,7 +87,9 @@ public class NaInteraction : MonoBehaviour
         li.SetActive(false);
         k.SetActive(false);
         cs.SetActive(false);
-        water.GetComponent<Renderer>().material.SetColor("_ReflectionColor", new Color(123f / 255f, 137f / 255f, 148f / 255f, 71f / 255f));
+        bowl.SetActive(true);
+        water2.GetComponent<Renderer>().material.SetColor("_horizonColor", new Color(0f, 32f / 255f, 49f / 255f, 0f));
+        water.GetComponent<Renderer>().material.SetColor("_BaseColor", new Color(7f / 255f, 34f / 255f, 51f / 255f, 238f / 255f));
 
     }
 }

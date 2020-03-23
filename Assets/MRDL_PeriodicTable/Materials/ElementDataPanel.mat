@@ -4,13 +4,15 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: ElementDataPanel
-  m_Shader: {fileID: 4800000, guid: 0ad3402479d87c74991269aa5c7c462a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 094d90edd31b4c341923e0248b3ea218, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _UVSEC_UV1
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -68,7 +70,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _EmissionScaleUI: 1
-    - _EmissionStrength: 0.956
+    - _EmissionStrength: 0.599
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -78,7 +80,7 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 0.699
     - _Parallax: 0.02
-    - _ReflectionPower: 1.81
+    - _ReflectionPower: 4.91
     - _RimPower: 0.57
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -87,7 +89,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.32413793, g: 1, b: 0, a: 1}
+    - _Color: {r: 0.8901961, g: 0.38431373, b: 0.47843137, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}

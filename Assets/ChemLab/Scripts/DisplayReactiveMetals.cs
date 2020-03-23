@@ -21,6 +21,9 @@ public class DisplayReactiveMetals : MonoBehaviour
     public GameObject cs;
     Vector3 csOrigPos;
 
+    public GameObject bowl;
+    public GameObject water2;
+
     public GameObject CsFormula;
     public GameObject KFormula;
     public GameObject LiFormula;
@@ -58,7 +61,9 @@ public class DisplayReactiveMetals : MonoBehaviour
         reactiveMetalsObjects.SetActive(true);
         RMGeneralComponents.SetActive(true);
         flameTestObjects.SetActive(false);
-        water.GetComponent<Renderer>().material.SetColor("_ReflectionColor", new Color(123f/255f, 137f/255f, 148f/255f, 71f/255f));
+        bowl.SetActive(true);
+        water2.GetComponent<Renderer>().material.SetColor("_horizonColor", new Color(0f, 32f / 255f, 49f / 255f, 0f));
+        water.GetComponent<Renderer>().material.SetColor("_BaseColor", new Color(7f / 255f, 34f / 255f, 51f / 255f, 238f / 255f));
     }
 
 
