@@ -35,8 +35,6 @@ public class FlameReaction : MonoBehaviour
                 flame.GetComponent<ParticleSystem>().startColor = new Color(184f / 255f, 159f / 255f, 81f / 255f, 1f);
                 break;
         }
-
-        flame.GetComponent<ParticleSystem>().startColor = new Color(.5f,0f,.5f);
     }
 
     void OnTriggerExit(Collider collider)
