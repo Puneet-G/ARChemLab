@@ -22,9 +22,13 @@ public class DisplayFlameTest : MonoBehaviour
     // Called by GazeGestureManager when the user performs a select gesture
     void OnSelect()
     {
+        foreach (GameObject s in sticks)
+        {
+            s.SetActive(false);
+        }
         reactiveMetalsObjects.SetActive(false);
         flameTestObjects.SetActive(true);
-
+        InfoPanel.SetActive(true);
     }
 
 
