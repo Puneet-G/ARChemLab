@@ -8,6 +8,8 @@ public class DisplayFlameTest : MonoBehaviour
     public GameObject flameTestObjects;
     public GameObject[] sticks;
 
+    public GameObject InfoPanel;
+
     //Use for init
     void Start()
     {

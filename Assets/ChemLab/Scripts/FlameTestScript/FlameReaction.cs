@@ -5,7 +5,8 @@ using UnityEngine;
 public class FlameReaction : MonoBehaviour
 {
     public GameObject flame;
-    
+
+    public GameObject FlameTestS3;
 
     void OnStart()
     {
@@ -21,18 +22,23 @@ public class FlameReaction : MonoBehaviour
         {
             case "KSalt":
                 flame.GetComponent<ParticleSystem>().startColor = new Color(1f, 0f, .6517f);
+                FlameTestS3.SetActive(true);
                 break;
             case "BaSalt":
                 flame.GetComponent<ParticleSystem>().startColor = new Color(0.06666664f, 0.7090117f, 0.7960784f);
+                FlameTestS3.SetActive(true);
                 break;
             case "CuSalt":
                 flame.GetComponent<ParticleSystem>().startColor = new Color(0.06666664f, 0.7960784f, 0.271321f);
+                FlameTestS3.SetActive(true);
                 break;
             case "CaSalt":
                 flame.GetComponent<ParticleSystem>().startColor = new Color(0.8679245f, 0.1211999f, 0.07778566f);
+                FlameTestS3.SetActive(true);
                 break;
             default:
                 flame.GetComponent<ParticleSystem>().startColor = new Color(32f / 255f, 40f / 255f, 255f / 255f, 1f);
+                FlameTestS3.SetActive(true);
                 break;
         }
     }
