@@ -47,7 +47,7 @@ public class Reaction : MonoBehaviour
             reactionClone.transform.Rotate(-90, 0, 0);
             water = collision.collider.gameObject.GetComponent<Renderer>().material;
             originalColor = water.GetColor("_BaseColor");
-            subBowlWater = collision.transform.parent.GetChild(1).GetComponent<Renderer>().material;
+            subBowlWater = collision.transform.parent.GetChild(2).GetComponent<Renderer>().material;
             subBowlWaterOriginalColor = subBowlWater.GetColor("_horizonColor");
             timeCollision = 0;
         }
@@ -62,7 +62,7 @@ public class Reaction : MonoBehaviour
             if (this.name == "Caesium")
             {
                 timeCollision += Time.deltaTime;
-                if (timeCollision >= 1.10f && !exploded)
+                if (timeCollision >= 1.5f && !exploded)
                 {
                     Debug.Log("In Explosion block");
                     exploded = true;

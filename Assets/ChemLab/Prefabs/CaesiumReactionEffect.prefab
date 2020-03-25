@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14126,15 +14126,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859880167833556, guid: 6f672a31584a6a748912a49c1dce2f0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.149
       objectReference: {fileID: 0}
     - target: {fileID: 4859880167833556, guid: 6f672a31584a6a748912a49c1dce2f0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4859880167833556, guid: 6f672a31584a6a748912a49c1dce2f0c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.08
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4859880167833556, guid: 6f672a31584a6a748912a49c1dce2f0c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14326,17 +14326,17 @@ PrefabInstance:
     - target: {fileID: 198938402097657526, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}
       propertyPath: startDelay.scalar
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198938402097657526, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}
       propertyPath: ShapeModule.type
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198938402097657526, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198938402097657526, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}
@@ -14366,7 +14366,7 @@ PrefabInstance:
     - target: {fileID: 198938402097657526, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.11029896
+      value: 0.038044002
       objectReference: {fileID: 0}
     - target: {fileID: 198956070365097430, guid: 6f672a31584a6a748912a49c1dce2f0c,
         type: 3}

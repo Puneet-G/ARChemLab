@@ -25,7 +25,7 @@ public class FlameReaction : MonoBehaviour
                 FlameTestS3.SetActive(true);
                 break;
             case "BaSalt":
-                flame.GetComponent<ParticleSystem>().startColor = new Color(0.06666664f, 0.7090117f, 0.7960784f);
+                flame.GetComponent<ParticleSystem>().startColor = new Color(.05473477f, 0.3920533f, 0.7735849f);
                 FlameTestS3.SetActive(true);
                 break;
             case "CuSalt":
