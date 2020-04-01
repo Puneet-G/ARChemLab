@@ -1,6 +1,6 @@
 # The ARChemLab
 No student's education should be limited by their circumstance or environment.
-We made the Augmented Reality Chemistry Laboratory to see if students could get practical science education, without the resources, insfrastructure or risk of a real-world laboratory.
+We made the Augmented Reality Chemistry Laboratory to see if students could get practical science education, without the resources, insfrastructure or risk that a real-world laboratory brings.
 
 Snippets of our demo are below and the [complete demo is on youtube!](http://www.youtube.com/watch?v=VeYEj6O6RxI "ARChemLab")
 
