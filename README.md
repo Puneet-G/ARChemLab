@@ -4,6 +4,8 @@ We made the Augmented Reality Chemistry Laboratory to see if students could get 
 
 Snippets of our demo are below and the [complete demo is on youtube!](http://www.youtube.com/watch?v=VeYEj6O6RxI "ARChemLab")
 
+The three core components of our laboratory are shown below.
+
 ## Flame Test
 ![](Gifs/FlameTestBarium.gif)
 
