@@ -11,7 +11,7 @@ Snippets of our demo are below and the [complete demo is on youtube!](http://www
 ![](Gifs/ReactiveAlkMetalsSodium.gif)
 
 ## Microsoft's MRDL Periodic Table
-<img src="https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable/blob/master/External/ReadMeImages/PeriodicTable_Hero.jpg" alt="Periodic Table of the Elements">
+<img src="https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable/blob/master/External/ReadMeImages/PeriodicTable_Hero.jpg" alt="Periodic Table of the Elements" width="640" height="320">
 
 ### Supported Unity version
 The current supported version of Unity is [**Unity 2018.4.x**](https://unity3d.com/unity/qa/lts-releases?version=2018.4). 
